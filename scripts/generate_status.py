@@ -70,7 +70,7 @@ for r, threshold in [("S", 2000), ("A", 1200), ("B", 700), ("C", 400), ("D", 150
         rank = r
         break
 
-HEAD = Template("""<svg width="900" height="320" viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Status window: hunter rank $rank, $contrib contributions in the last year">
+HEAD = Template("""<svg width="900" height="320" viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Status window: true rank S (surface scan $rank), $contrib contributions in the last year">
   <defs>
     <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="3" result="b"/>
@@ -109,8 +109,8 @@ HEAD = Template("""<svg width="900" height="320" viewBox="0 0 900 320" fill="non
     <path d="M20 272 V300 H48"/><path d="M852 300 H880 V272"/>
   </g>
   <text class="hdr" x="60" y="66"><tspan class="dot">◈</tspan> STATUS WINDOW · HUNTER LICENSE: $user</text>
-  <text class="rank" x="76" y="204" filter="url(#glow2)">$rank</text>
-  <text class="ranklbl" x="62" y="236">HUNTER RANK</text>
+  <text class="rank" x="76" y="204" filter="url(#glow2)">S</text>
+  <text class="ranklbl" x="62" y="236">TRUE RANK</text>
 """)
 
 STAT_ROW = Template(
@@ -153,7 +153,7 @@ for i, (name, size) in enumerate(top):
         pct=pct,
     )
 
-svg += '  <text class="ranklbl" x="260" y="272">SYSTEM LOG: THE PLAYER IS GRINDING · RANK REASSESSED DAILY</text>\n'
+svg += f'  <text class="ranklbl" x="260" y="272">SURFACE SCAN: {rank}-RANK · TRUE POWER CONCEALED · RE-SCANNED DAILY</text>\n'
 svg += "</svg>\n"
 
 os.makedirs("dist", exist_ok=True)
