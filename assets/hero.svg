@@ -1,0 +1,112 @@
+<svg width="900" height="340" viewBox="0 0 900 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="System notification: Player Daniel Mastick has awakened">
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#4CC9F0" opacity="0.04"/>
+    </pattern>
+    <linearGradient id="panelfade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0C1430"/>
+      <stop offset="1" stop-color="#070B1A"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+    .notif { fill: #4CC9F0; font-size: 13px; letter-spacing: 5px; animation: blink 2s steps(1) infinite; }
+    .name { fill: #EAF2FF; font-size: 40px; font-weight: 700; letter-spacing: 1px; }
+    .cursor { fill: #4CC9F0; animation: blink 1.1s steps(1) infinite; }
+    .lbl { fill: #55608A; font-size: 15px; }
+    .word { fill: #4CC9F0; font-size: 15px; font-weight: 700; letter-spacing: 2px; opacity: 0; animation: cycle 12s infinite; }
+    .w2 { animation-delay: 3s; } .w3 { animation-delay: 6s; } .w4 { animation-delay: 9s; }
+    .title { fill: #9D5CFF; font-size: 15px; letter-spacing: 2px; }
+    .bar { fill: #8A94C0; font-size: 12px; letter-spacing: 2px; }
+    .val { fill: #55608A; font-size: 12px; }
+    .quest { fill: #3D4670; font-size: 11px; letter-spacing: 3px; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.15; } }
+    @keyframes cycle { 0% { opacity: 0; } 5%, 22% { opacity: 1; } 29%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .word { opacity: 0; } .w1 { opacity: 1; }
+    }
+  </style>
+
+  <!-- system panel -->
+  <rect x="20" y="20" width="860" height="300" rx="10" fill="url(#panelfade)"/>
+  <rect x="20" y="20" width="860" height="300" rx="10" fill="url(#scan)"/>
+  <rect x="20.5" y="20.5" width="859" height="299" rx="9.5" stroke="#4CC9F0" stroke-opacity="0.55" filter="url(#glow)"/>
+
+  <!-- corner brackets -->
+  <g stroke="#4CC9F0" stroke-width="2.5" filter="url(#glow)">
+    <path d="M20 48 V20 H48"/>
+    <path d="M852 20 H880 V48"/>
+    <path d="M20 292 V320 H48"/>
+    <path d="M852 320 H880 V292"/>
+  </g>
+
+  <!-- rising mana particles -->
+  <g fill="#9D5CFF">
+    <circle cx="810" cy="290" r="2">
+      <animate attributeName="cy" values="290;120" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="760" cy="300" r="1.5">
+      <animate attributeName="cy" values="300;150" dur="9s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="9s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="850" cy="280" r="1.5">
+      <animate attributeName="cy" values="280;100" dur="8s" begin="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="8s" begin="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="310" r="2" fill="#4CC9F0">
+      <animate attributeName="cy" values="310;170" dur="10s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="10s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="838" cy="300" r="1.2" fill="#4CC9F0">
+      <animate attributeName="cy" values="300;140" dur="6.5s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="6.5s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <text class="notif" x="60" y="66">⚠ SYSTEM NOTIFICATION</text>
+  <text class="name" x="56" y="122" filter="url(#glow2)">PLAYER: DANIEL MASTICK<tspan class="cursor">_</tspan></text>
+
+  <text class="lbl" x="60" y="162">CLASS:</text>
+  <text class="word w1" x="130" y="162">AI ENGINEER</text>
+  <text class="word w2" x="130" y="162">ROBOT TAMER</text>
+  <text class="word w3" x="130" y="162">GAME DEV</text>
+  <text class="word w4" x="130" y="162">MOBILE DEV</text>
+  <text class="title" x="60" y="190">TITLE: 「 THE ONE WHO SHIPS 」</text>
+
+  <!-- stat bars -->
+  <text class="bar" x="60" y="219">HP</text>
+  <rect x="120" y="210" width="560" height="10" rx="5" fill="#121A38"/>
+  <rect x="120" y="210" width="0" height="10" rx="5" fill="#3DF5A6">
+    <animate attributeName="width" from="0" to="515" dur="1.2s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1" keyTimes="0;1"/>
+  </rect>
+  <text class="val" x="700" y="219">92 / 100 · CURIOSITY</text>
+
+  <text class="bar" x="60" y="245">MP</text>
+  <rect x="120" y="236" width="560" height="10" rx="5" fill="#121A38"/>
+  <rect x="120" y="236" width="0" height="10" rx="5" fill="#9D5CFF">
+    <animate attributeName="width" from="0" to="493" dur="1.2s" begin="0.25s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1" keyTimes="0;1"/>
+  </rect>
+  <text class="val" x="700" y="245">88 / 100 · CAFFEINE</text>
+
+  <text class="bar" x="60" y="271">XP</text>
+  <rect x="120" y="262" width="560" height="10" rx="5" fill="#121A38"/>
+  <rect x="120" y="262" width="0" height="10" rx="5" fill="#4CC9F0">
+    <animate attributeName="width" from="0" to="342" dur="1.4s" begin="0.5s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1" keyTimes="0;1"/>
+  </rect>
+  <rect x="120" y="262" width="342" height="10" rx="5" fill="#4CC9F0" opacity="0">
+    <animate attributeName="opacity" values="0;0.45;0" dur="2.2s" begin="2s" repeatCount="indefinite"/>
+  </rect>
+  <text class="val" x="700" y="271">▸ NEXT: FRONTIER ML</text>
+
+  <text class="quest" x="60" y="304">DAILY QUEST: BUILD SOMETHING NEW · STATUS: IN PROGRESS · PENALTY ZONE: NONE</text>
+</svg>

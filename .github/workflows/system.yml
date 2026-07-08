@@ -1,4 +1,4 @@
-name: Generate contribution snake
+name: Forge system windows
 
 on:
   schedule:
@@ -12,17 +12,25 @@ permissions:
   contents: write
 
 jobs:
-  generate:
+  forge:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate status window
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: python3 scripts/generate_status.py
+
       - name: Generate snake SVGs
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=#B45309
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#FFB454
+            dist/github-contribution-grid-snake.svg?color_snake=#7209B7
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#4CC9F0
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
