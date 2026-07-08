@@ -61,7 +61,7 @@ I'm a student who builds across the whole map — AI workflows, autonomous robot
 ## ⌁ Open channel
 
 If you're working on something at the frontier — or just want to talk shop — my inbox is open.
-
+ 
 <div align="center">
 
 <a href="mailto:djmastick@gmail.com"><img src="https://img.shields.io/badge/EMAIL-djmastick%40gmail.com-0B1021?style=flat-square&labelColor=FFB454&logoColor=0B1021" alt="Email" /></a>
