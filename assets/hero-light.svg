@@ -1,0 +1,66 @@
+<svg width="900" height="300" viewBox="0 0 900 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daniel Mastick — I build AI workflows, autonomous robots, games, and mobile apps">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+    .eyebrow { fill: #B45309; font-size: 13px; letter-spacing: 5px; }
+    .name { fill: #14161F; font-size: 54px; font-weight: 700; letter-spacing: 1px; }
+    .cursor { fill: #B45309; animation: blink 1.2s steps(1) infinite; }
+    .lead { fill: #6B7186; font-size: 17px; }
+    .word { fill: #B45309; font-size: 17px; opacity: 0; animation: cycle 12s infinite; }
+    .w2 { animation-delay: 3s; }
+    .w3 { animation-delay: 6s; }
+    .w4 { animation-delay: 9s; }
+    .tele { fill: #9AA0B2; font-size: 11px; letter-spacing: 3px; }
+    .star { fill: #14161F; animation: twinkle 4s ease-in-out infinite; }
+    .s2 { animation-delay: 1.3s; }
+    .s3 { animation-delay: 2.6s; }
+    .grid { stroke: #ECEAE2; stroke-width: 1; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes cycle { 0% { opacity: 0; } 5%, 22% { opacity: 1; } 29%, 100% { opacity: 0; } }
+    @keyframes twinkle { 0%, 100% { opacity: 0.1; } 50% { opacity: 0.5; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .word { opacity: 0; }
+      .w1 { opacity: 1; }
+    }
+  </style>
+
+  <rect width="900" height="300" rx="14" fill="#FBFBF9"/>
+  <rect x="0.5" y="0.5" width="899" height="299" rx="13.5" stroke="#ECEAE2"/>
+
+  <!-- perspective horizon grid -->
+  <g class="grid">
+    <line x1="450" y1="218" x2="-40" y2="300"/>
+    <line x1="450" y1="218" x2="120" y2="300"/>
+    <line x1="450" y1="218" x2="285" y2="300"/>
+    <line x1="450" y1="218" x2="450" y2="300"/>
+    <line x1="450" y1="218" x2="615" y2="300"/>
+    <line x1="450" y1="218" x2="780" y2="300"/>
+    <line x1="450" y1="218" x2="940" y2="300"/>
+    <line x1="0" y1="238" x2="900" y2="238"/>
+    <line x1="0" y1="258" x2="900" y2="258"/>
+    <line x1="0" y1="282" x2="900" y2="282"/>
+  </g>
+
+  <!-- starfield -->
+  <circle class="star" cx="120" cy="42" r="1.4"/>
+  <circle class="star s2" cx="298" cy="30" r="1.1"/>
+  <circle class="star s3" cx="520" cy="46" r="1.6"/>
+  <circle class="star" cx="702" cy="32" r="1.2"/>
+  <circle class="star s2" cx="832" cy="62" r="1.5"/>
+  <circle class="star s3" cx="762" cy="122" r="1.1"/>
+  <circle class="star" cx="862" cy="172" r="1.3"/>
+  <circle class="star s3" cx="642" cy="72" r="1.0"/>
+  <circle class="star s2" cx="205" cy="58" r="1.2"/>
+  <circle class="star" cx="410" cy="26" r="1.0"/>
+
+  <text class="eyebrow" x="60" y="88">// BUILD LOG — HY0REN</text>
+  <text class="name" x="56" y="150">DANIEL MASTICK<tspan class="cursor">_</tspan></text>
+
+  <text class="lead" x="60" y="192">I build</text>
+  <text class="word w1" x="140" y="192">AI workflows</text>
+  <text class="word w2" x="140" y="192">autonomous robots</text>
+  <text class="word w3" x="140" y="192">games</text>
+  <text class="word w4" x="140" y="192">mobile apps</text>
+
+  <text class="tele" x="60" y="270">STATUS: SHIPPING · TARGET: FRONTIER ML · MODE: EXPLORING</text>
+</svg>
