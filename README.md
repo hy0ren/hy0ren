@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg" />
-  <img src="assets/hero-dark.svg" alt="Daniel Mastick — I build AI workflows, autonomous robots, games, and mobile apps" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hy0ren/hy0ren/main/assets/hero-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hy0ren/hy0ren/main/assets/hero-light.svg" />
+  <img src="https://raw.githubusercontent.com/hy0ren/hy0ren/main/assets/hero-dark.svg" alt="Daniel Mastick — I build AI workflows, autonomous robots, games, and mobile apps" width="100%" />
 </picture>
 
 </div>
